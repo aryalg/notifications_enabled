@@ -7,7 +7,7 @@ class NotificationsEnabled {
   static const MethodChannel _channel = const MethodChannel('com.github.jonyas/notifications_enabled');
 
   static Future<Optional<bool>> get notificationsEnabled async {
-    final bool notificationsEnabled = await _channel.invokeMethod('getNotificationsEnabled');
+    final bool? notificationsEnabled = await _channel.invokeMethod('getNotificationsEnabled');
     return Optional.fromNullable(notificationsEnabled);
   }
 }
